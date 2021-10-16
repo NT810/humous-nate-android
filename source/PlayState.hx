@@ -62,16 +62,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['You Suck!', 0.2], //From 0% to 19%
-		['Shit', 0.4], //From 20% to 39%
-		['Bad', 0.5], //From 40% to 49%
-		['Bruh', 0.6], //From 50% to 59%
-		['Meh', 0.69], //From 60% to 68%
-		['Nice', 0.7], //69%
-		['Good', 0.8], //From 70% to 79%
-		['Great', 0.9], //From 80% to 89%
-		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['i hate you so much like how can you be so bad maybe actually practice the game before playing this you are genuinely the worst rhythm game player ive ever seen in my entire life like you really gotta try harder than this man but at this rate i dont think you will ever improve man go get a life man go touch grass.', 0.2], //From 0% to 19%
+		['virgin', 0.4], //From 20% to 39%
+		['small penis', 0.5], //From 40% to 49%
+		['shitting', 0.6], //From 50% to 59%
+		['pooping', 0.69], //From 60% to 68%
+		['sharting', 0.7], //69%
+		['humongous nathaniell', 0.8], //From 70% to 79%
+		['cum', 0.9], //From 80% to 89%
+		['a singular ball', 1], //From 90% to 99%
+		['how', 1]
 	];
 	
 	#if (haxe >= "4.0.0")
@@ -307,6 +307,8 @@ class PlayState extends MusicBeatState
 		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
 			switch (songName)
 			{
+				case 'taco':
+					curStage = 'tacobell';
 				case 'spookeez' | 'south' | 'monster':
 					curStage = 'spooky';
 				case 'pico' | 'blammed' | 'philly' | 'philly-nice':
@@ -625,6 +627,50 @@ class PlayState extends MusicBeatState
 					bg.antialiasing = false;
 					add(bg);
 				}
+			case 'tacobell':
+				var bg:BGSprite = new BGSprite('tacobell/background', -150, 0, 0.9, 0.9);
+				bg.setGraphicSize(Std.int(bg.width * 1.2));
+
+				var weirdlosslookinshit = new BGSprite('tacobell/weirdlosslookinshit', -150, 0, 0.9, 0.9);
+				weirdlosslookinshit.setGraphicSize(Std.int(weirdlosslookinshit.width * 1.2));
+				
+				var till = new BGSprite('tacobell/till', -150, 0, 0.9, 0.9);
+				till.setGraphicSize(Std.int(till.width * 1.2));
+				
+				var tablebackleft = new BGSprite('tacobell/tablebackleft', -150, 0, 0.9, 0.9);
+				tablebackleft.setGraphicSize(Std.int(tablebackleft.width * 1.2));
+				var tablebackright = new BGSprite('tacobell/tablebackright', -150, 0, 0.9, 0.9);
+				tablebackright.setGraphicSize(Std.int(tablebackright.width * 1.2));
+				
+				var tableleft = new BGSprite('tacobell/tableleft', -150, 0, 0.9, 0.9);
+				tableleft.setGraphicSize(Std.int(tableleft.width * 1.2));
+				var tableright = new BGSprite('tacobell/tableright', -150, 0, 0.9, 0.9);
+				tableright.setGraphicSize(Std.int(tableright.width * 1.2));
+
+				var leftchairs = new BGSprite('tacobell/leftchairs', -150, 0, 0.9, 0.9);
+				leftchairs.setGraphicSize(Std.int(leftchairs.width * 1.2));
+				var rightchairs = new BGSprite('tacobell/rightchairs', -150, 0, 0.9, 0.9);
+				rightchairs.setGraphicSize(Std.int(rightchairs.width * 1.2));
+			
+				var tableedgeleft = new BGSprite('tacobell/tableedgeleft', -150, 0, 0.9, 0.9);
+				tableedgeleft.setGraphicSize(Std.int(tableedgeleft.width * 1.2));
+				var tableedgeright = new BGSprite('tacobell/tableedgeright', -150, 0, 0.9, 0.9);
+				tableedgeright.setGraphicSize(Std.int(tableedgeright.width * 1.2));
+
+				defaultCamZoom = 0.85;
+
+				add(bg);
+				add(weirdlosslookinshit);
+				add(till);
+				add(tablebackright);
+				add(tablebackleft);
+				add(tableright);
+				add(tableleft);
+				add(rightchairs);
+				add(leftchairs);
+				add(tableedgeright);
+				add(tableedgeleft);
+				//HELP
 		}
 
 		if(isPixelStage) {
@@ -744,6 +790,13 @@ class PlayState extends MusicBeatState
 			case 'schoolEvil':
 				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069); //nice
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
+			
+			case 'tacobell':
+				dad.y += 100;
+				dad.x -= 100;
+				boyfriend.x += 50;
+				boyfriend.y += 70;
+				gf.visible = false;
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
