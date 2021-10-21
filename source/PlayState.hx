@@ -796,7 +796,8 @@ class PlayState extends MusicBeatState
 				dad.x -= 100;
 				boyfriend.x += 50;
 				boyfriend.y += 70;
-				gf.visible = false;
+				gf.y -= 225;
+				gf.x -= 180;
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
