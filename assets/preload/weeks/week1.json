@@ -9,11 +9,6 @@
 		253
 	],
 	"startUnlocked": true,
-	"weekCharacters": [
-		"bf",
-		"gf",
-		"bf"
-	],
 	"songs": [
 		[
 			"Taco",
@@ -23,8 +18,31 @@
 				113,
 				253
 			]
+		],
+		[
+			"Bafroom",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Baja-Blast",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
 		]
 	],
 	"hideStoryMode": false,
+	"weekCharacters": [
+		"bf",
+		"gf",
+		"bf"
+	],
 	"weekName": "week 1"
 }
