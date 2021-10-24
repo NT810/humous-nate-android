@@ -792,8 +792,8 @@ class PlayState extends MusicBeatState
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
 			
 			case 'tacobell':
-				dad.y += 100;
-				dad.x -= 100;
+				dad.y += 120;
+				dad.x += 50;
 				boyfriend.x += 50;
 				boyfriend.y += 70;
 				gf.y -= 225;

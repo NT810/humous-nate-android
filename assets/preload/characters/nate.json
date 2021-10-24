@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Nate_Idle"
+		},
+		{
+			"offsets": [
+				248,
+				-53
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Nate_Left"
+		},
+		{
+			"offsets": [
+				138,
+				-103
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Nate_Down"
+		},
+		{
+			"offsets": [
+				165,
+				4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Nate_Up"
+		},
+		{
+			"offsets": [
+				148,
+				-49
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Nate_Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/nate",
+	"position": [
+		210,
+		110
+	],
+	"healthicon": "nate",
+	"flip_x": false,
+	"healthbar_colors": [
+		55,
+		255,
+		206
+	],
+	"camera_position": [
+		-40,
+		20
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
