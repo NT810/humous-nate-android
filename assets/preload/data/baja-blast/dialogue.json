@@ -1,0 +1,95 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Alright dude, you're gonna make me shit myself"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "XD"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "omfg just go use the bathroom"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I told you I can't find it"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Are you blind?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "No"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I think"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "You think?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "yeah"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Bep Bop Beep\\n(Tacussy in Boyfriend-ese)"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "What is this mf saying"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "He called you a slur"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "bruh"
+		}
+	]
+}

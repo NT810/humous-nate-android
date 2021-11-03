@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NATE_PORTRAITS.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Nate_PORTRAIT0000" x="10" y="10" width="261" height="399" frameX="-4" frameY="0" frameWidth="272" frameHeight="500"/>
+	<SubTexture name="Nate_PORTRAIT0001" x="10" y="10" width="261" height="399" frameX="-4" frameY="0" frameWidth="272" frameHeight="500"/>
+	<SubTexture name="Nate_PORTRAIT0002" x="281" y="10" width="268" height="494" frameX="-2" frameY="-6" frameWidth="272" frameHeight="500"/>
+	<SubTexture name="Nate_PORTRAIT0003" x="281" y="10" width="268" height="494" frameX="-2" frameY="-6" frameWidth="272" frameHeight="500"/>
+	<SubTexture name="Nate_PORTRAIT0004" x="559" y="10" width="272" height="495" frameX="0" frameY="-5" frameWidth="272" frameHeight="500"/>
+	<SubTexture name="Nate_PORTRAIT0005" x="559" y="10" width="272" height="495" frameX="0" frameY="-5" frameWidth="272" frameHeight="500"/>
+	<SubTexture name="Nate_PORTRAIT0006" x="559" y="10" width="272" height="495" frameX="0" frameY="-5" frameWidth="272" frameHeight="500"/>
+</TextureAtlas>

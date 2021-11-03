@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="UNIQUEGEESE_PORTRAIT.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="UniquePeese PORTRAIT0000" x="10" y="10" width="356" height="483" frameX="-7" frameY="0" frameWidth="369" frameHeight="483"/>
+	<SubTexture name="UniquePeese PORTRAIT0001" x="10" y="10" width="356" height="483" frameX="-7" frameY="0" frameWidth="369" frameHeight="483"/>
+	<SubTexture name="UniquePeese PORTRAIT0002" x="376" y="10" width="363" height="480" frameX="-3" frameY="-3" frameWidth="369" frameHeight="483"/>
+	<SubTexture name="UniquePeese PORTRAIT0003" x="376" y="10" width="363" height="480" frameX="-3" frameY="-3" frameWidth="369" frameHeight="483"/>
+	<SubTexture name="UniquePeese PORTRAIT0004" x="10" y="503" width="369" height="479" frameX="0" frameY="-4" frameWidth="369" frameHeight="483"/>
+	<SubTexture name="UniquePeese PORTRAIT0005" x="10" y="503" width="369" height="479" frameX="0" frameY="-4" frameWidth="369" frameHeight="483"/>
+	<SubTexture name="UniquePeese PORTRAIT0006" x="10" y="503" width="369" height="479" frameX="0" frameY="-4" frameWidth="369" frameHeight="483"/>
+</TextureAtlas>

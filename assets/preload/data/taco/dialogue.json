@@ -1,0 +1,60 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Hey BF u wanna go to Taco Bell I'm hungry"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Sure bitch"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Ok omg I love taco bell"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Hey do you know where the bathroom is? I just had 3 tacos."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Beep"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "????"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "beepbobopskdoobepbopbeepbopeepoboobop"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Bruh I don't speak Animal Crossing."
+		}
+	]
+}
