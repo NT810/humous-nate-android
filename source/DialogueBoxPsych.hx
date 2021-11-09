@@ -12,6 +12,7 @@ import flixel.util.FlxTimer;
 import flixel.FlxSubState;
 import haxe.Json;
 import haxe.format.JsonParser;
+import PlayState;
 #if sys
 import sys.FileSystem;
 import sys.io.File;
@@ -40,11 +41,11 @@ typedef DialogueAnimArray = {
 // Gonna try to kind of make it compatible to Forever Engine,
 // love u Shubs no homo :flushedh4:
 typedef DialogueFile = {
-	var dialogue:Array<DialogueLine>;
+	public var dialogue:Array<DialogueLine>;
 }
 
 typedef DialogueLine = {
-	var portrait:Null<String>;
+	public var portrait:Null<String>;
 	var expression:Null<String>;
 	var text:Null<String>;
 	var boxState:Null<String>;
@@ -158,6 +159,8 @@ class DialogueCharacter extends FlxSprite
 // TO DO: Clean code? Maybe? idk
 class DialogueBoxPsych extends FlxSpriteGroup
 {
+	// Black Box
+	//public var blackbox:FlxSprite = new FlxSprite(-50, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 	var dialogue:Alphabet;
 	var dialogueList:DialogueFile = null;
 
@@ -190,8 +193,12 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		bgFade.visible = true;
 		bgFade.alpha = 0;
 		add(bgFade);
-
 		this.dialogueList = dialogueList;
+		// adds black box
+		//if (PlayState.curSong == 'taco') {
+		//	blackbox.scrollFactor.set();
+		//	add(blackbox);
+		//	}
 		spawnCharacters();
 
 		box = new FlxSprite(70, 370);
@@ -440,6 +447,10 @@ class DialogueBoxPsych extends FlxSpriteGroup
 	var lastBoxType:String = '';
 	function startNextDialog():Void
 	{
+		// Pls Fix munky
+		/*if (curCharacter == 'nate') {
+			blackbox.kill();
+		}*/
 		var curDialogue:DialogueLine = null;
 		do {
 			curDialogue = dialogueList.dialogue[currentText];

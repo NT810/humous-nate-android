@@ -1,5 +1,5 @@
 {
-	"storyName": "immense nathan of considerable size",
+	"storyName": "Shit Stain",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
@@ -9,40 +9,40 @@
 		253
 	],
 	"startUnlocked": true,
+	"weekCharacters": [
+		"nate",
+		"bf",
+		"gf"
+	],
 	"songs": [
 		[
 			"Taco",
-			"dad",
+			"nate",
 			[
-				146,
-				113,
-				253
+				0,
+				254,
+				191
 			]
 		],
 		[
 			"Bafroom",
-			"dad",
+			"nate",
 			[
-				146,
-				113,
-				253
+				0,
+				254,
+				191
 			]
 		],
 		[
 			"Baja-Blast",
-			"dad",
+			"nate",
 			[
-				146,
-				113,
-				253
+				0,
+				254,
+				191
 			]
 		]
 	],
 	"hideStoryMode": false,
-	"weekCharacters": [
-		"bf",
-		"gf",
-		"bf"
-	],
-	"weekName": "week 1"
+	"weekName": "week taco"
 }

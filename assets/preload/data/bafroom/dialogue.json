@@ -4,113 +4,113 @@
 			"expression": "talk",
 			"text": "Damn you beat me harder than my dad",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "nate"
+			"portrait": "nate",
+			"speed": 0.05
 		},
 		{
 			"expression": "talk",
 			"text": "But this time I'll do better",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "nate"
+			"portrait": "nate",
+			"speed": 0.05
 		},
 		{
 			"expression": "talk",
 			"text": "I hope",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "nate"
+			"portrait": "nate",
+			"speed": 0.05
 		},
 		{
 			"expression": "talk",
 			"text": "beep boo boo bop boo boo bop",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "bf"
+			"portrait": "bf",
+			"speed": 0.05
 		},
 		{
 			"expression": "talk",
 			"text": "Shut up bitch, or I'm gonna cancel you on twitter.",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "nate"
+			"portrait": "nate",
+			"speed": 0.05
 		},
 		{
 			"expression": "talk",
 			"text": "",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "nate"
+			"portrait": "nate",
+			"speed": 0.05
 		},
 		{
 			"expression": "talk",
 			"text": "",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "bf"
+			"portrait": "bf",
+			"speed": 0.05
 		},
 		{
 			"expression": "talk",
 			"text": "",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "nate"
+			"portrait": "nate",
+			"speed": 0.05
 		},
 		{
 			"expression": "talk",
 			"text": "",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "bf"
+			"portrait": "bf",
+			"speed": 0.05
 		},
 		{
 			"expression": "talk",
 			"text": "just kidding lol",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "nate"
+			"portrait": "nate",
+			"speed": 0.05
 		},
 		{
 			"expression": "pissed",
 			"text": "Boop Poopity Scoop",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "bf"
+			"portrait": "bf",
+			"speed": 0.05
 		},
 		{
 			"expression": "talk",
 			"text": "Hey guys it's me UniqueGeese welcome to Taco Bell",
 			"boxState": "normal",
-			"speed": 0.05,
-			"portrait": "uniquegeese"
+			"portrait": "uniquegeese",
+			"speed": 0.05
 		},
 		{
-			"speed": 0.05,
-			"portrait": "gf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "Shut the fuck up UniqueGeese"
+			"text": "Shut the fuck up UniqueGeese",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "nate",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "I still have to shit"
+			"text": "I still have to shit",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "nate"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "gf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "The bathroom is literally right there"
+			"text": "The bathroom is literally right there",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "Yeah you fucking idot"
+			"text": "Yeah you fucking idiot",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		}
 	]
 }
