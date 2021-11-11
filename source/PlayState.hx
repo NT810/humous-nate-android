@@ -384,36 +384,46 @@ class PlayState extends MusicBeatState
 
 
 			case 'tacobell':
+				var bgZoom:Float = 1.2;
 				var bg:BGSprite = new BGSprite('tacobell/background', -150, 0);
-				bg.setGraphicSize(Std.int(bg.width * 1.1));
+				bg.setGraphicSize(Std.int(bg.width * bgZoom));
+				bg.screenCenter();
 
 				var weirdlosslookinshit = new BGSprite('tacobell/weirdlosslookinshit', -150, 0);
-				weirdlosslookinshit.setGraphicSize(Std.int(weirdlosslookinshit.width * 1.1));
+				weirdlosslookinshit.setGraphicSize(Std.int(weirdlosslookinshit.width * bgZoom));
+				weirdlosslookinshit.screenCenter();
 
 				var till = new BGSprite('tacobell/till', -150, 0);
-				till.setGraphicSize(Std.int(till.width * 1.1));
+				till.setGraphicSize(Std.int(till.width * bgZoom));
+				till.screenCenter();
 
 				var tablebackleft = new BGSprite('tacobell/tablebackleft', -150, 0);
-				tablebackleft.setGraphicSize(Std.int(tablebackleft.width * 1.1));
+				tablebackleft.setGraphicSize(Std.int(tablebackleft.width * bgZoom));
+				tablebackleft.screenCenter();
 				var tablebackright = new BGSprite('tacobell/tablebackright', -150, 0);
-				tablebackright.setGraphicSize(Std.int(tablebackright.width * 1.1));
+				tablebackright.setGraphicSize(Std.int(tablebackright.width * bgZoom));
+				tablebackright.screenCenter();
 
 				var tableleft = new BGSprite('tacobell/tableleft', -150, 0);
-				tableleft.setGraphicSize(Std.int(tableleft.width * 1.1));
+				tableleft.setGraphicSize(Std.int(tableleft.width * bgZoom));
+				tableleft.screenCenter();
 				var tableright = new BGSprite('tacobell/tableright', -150, 0);
-				tableright.setGraphicSize(Std.int(tableright.width * 1.1));
+				tableright.setGraphicSize(Std.int(tableright.width * bgZoom));
+				tableright.screenCenter();
 
 				var leftchairs = new BGSprite('tacobell/leftchairs', -150, 0);
-				leftchairs.setGraphicSize(Std.int(leftchairs.width * 1.1));
+				leftchairs.setGraphicSize(Std.int(leftchairs.width * bgZoom));
+				leftchairs.screenCenter();
 				var rightchairs = new BGSprite('tacobell/rightchairs', -150, 0);
-				rightchairs.setGraphicSize(Std.int(rightchairs.width * 1.1));
+				rightchairs.setGraphicSize(Std.int(rightchairs.width * bgZoom));
+				rightchairs.screenCenter();
 
 				var tableedgeleft = new BGSprite('tacobell/tableedgeleft', -150, 0);
-				tableedgeleft.setGraphicSize(Std.int(tableedgeleft.width * 1.1));
+				tableedgeleft.setGraphicSize(Std.int(tableedgeleft.width * bgZoom));
+				tableedgeleft.screenCenter();
 				var tableedgeright = new BGSprite('tacobell/tableedgeright', -150, 0);
-				tableedgeright.setGraphicSize(Std.int(tableedgeright.width * 1.1));
-
-				defaultCamZoom = 0.85;
+				tableedgeright.setGraphicSize(Std.int(tableedgeright.width * bgZoom));
+				tableedgeright.screenCenter();
 
 				add(bg);
 				add(weirdlosslookinshit);
@@ -422,29 +432,29 @@ class PlayState extends MusicBeatState
 				add(tablebackleft);
 				add(tableright);
 				add(tableleft);
-				add(rightchairs);
-				add(leftchairs);
+				// add(rightchairs);
+				// add(leftchairs);
 				add(tableedgeright);
 				add(tableedgeleft);
 				//HELP
 			case "outside":
 				var sky = new BGSprite("outside/sky", 0, 0, 0.85, 0.15);
-				sky.setGraphicSize(Std.int(sky.width * 1.1));
+				sky.setGraphicSize(Std.int(sky.width * 1.2));
 				sky.screenCenter();
 				add(sky);
 
 				var sign = new BGSprite("outside/dabell", 0, 0, 0.9, 0.6);
-				sign.setGraphicSize(Std.int(sign.width * 1.1));
+				sign.setGraphicSize(Std.int(sign.width * 1.2));
 				sky.screenCenter();
 				add(sign);
 
 				var building = new BGSprite("outside/taco", 0, 0);
-				building.setGraphicSize(Std.int(building.width * 1.1));
+				building.setGraphicSize(Std.int(building.width * 1.2));
 				building.screenCenter();
 				add(building);
 
 				var lights = new BGSprite("outside/lights", 0, 0);
-				lights.setGraphicSize(Std.int(lights.width * 1.1));
+				lights.setGraphicSize(Std.int(lights.width * 1.2));
 				lights.screenCenter();
 				add(lights);
 		}
@@ -564,18 +574,8 @@ class PlayState extends MusicBeatState
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
 
 			case 'tacobell':
-				dad.y += 120;
-				dad.x += 50;
-				boyfriend.x += 50;
-				boyfriend.y += 70;
-				gf.y -= 225;
-				gf.x -= 180;
 			case 'outside':
 				gf.visible = false;
-				dad.y -= 120;
-				dad.x -= 50;
-				boyfriend.x += 50;
-				boyfriend.y -= 70;
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
@@ -842,6 +842,8 @@ class PlayState extends MusicBeatState
 
 				case 'taco' | 'baja-blast' | 'bafroom':
 					{
+						snapCamFollowToPos(FlxG.width/2, FlxG.height/2);
+						FlxG.camera.focusOn(camFollow);
 						startDialogue(dialogueJson);
 					}
 

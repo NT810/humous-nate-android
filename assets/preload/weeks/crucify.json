@@ -1,0 +1,30 @@
+{
+	"storyName": "crucify",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "week taco",
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"weekCharacters": [
+		"nate",
+		"nate",
+		"nate"
+	],
+	"songs": [
+		[
+			"Crucify",
+			"ian",
+			[
+				0,
+				114,
+				211
+			]
+		]
+	],
+	"weekName": "crucify"
+}
