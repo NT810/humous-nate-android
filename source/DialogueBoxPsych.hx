@@ -13,6 +13,7 @@ import flixel.FlxSubState;
 import haxe.Json;
 import haxe.format.JsonParser;
 import PlayState;
+import flixel.tweens.FlxTween;
 #if sys
 import sys.FileSystem;
 import sys.io.File;
@@ -100,7 +101,7 @@ class DialogueCharacter extends FlxSprite
 		var path:String = Paths.getPreloadPath(characterPath);
 		rawJson = Assets.getText(path);
 		#end
-		
+
 		jsonFile = cast Json.parse(rawJson);
 	}
 
@@ -160,7 +161,7 @@ class DialogueCharacter extends FlxSprite
 class DialogueBoxPsych extends FlxSpriteGroup
 {
 	// Black Box
-	//public var blackbox:FlxSprite = new FlxSprite(-50, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+	var blackbox:FlxSprite = new FlxSprite(-50, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 	var dialogue:Alphabet;
 	var dialogueList:DialogueFile = null;
 
@@ -187,18 +188,22 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			FlxG.sound.playMusic(Paths.music(song), 0);
 			FlxG.sound.music.fadeIn(2, 0, 1);
 		}
-		
+
 		bgFade = new FlxSprite(-500, -500).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.WHITE);
 		bgFade.scrollFactor.set();
 		bgFade.visible = true;
 		bgFade.alpha = 0;
 		add(bgFade);
+
+		blackbox.scrollFactor.set();
+		blackbox.visible = false;
+		if (PlayState.curSong == "taco") {
+			blackbox.visible = true;
+		}
+		add(blackbox);
+
 		this.dialogueList = dialogueList;
-		// adds black box
-		//if (PlayState.curSong == 'taco') {
-		//	blackbox.scrollFactor.set();
-		//	add(blackbox);
-		//	}
+
 		spawnCharacters();
 
 		box = new FlxSprite(70, 370);
@@ -304,7 +309,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 					}
 					daText = new Alphabet(DEFAULT_TEXT_X, DEFAULT_TEXT_Y, textToType, false, true, 0.0, 0.7);
 					add(daText);
-					
+
 					if(skipDialogueThing != null) {
 						skipDialogueThing();
 					}
@@ -447,10 +452,6 @@ class DialogueBoxPsych extends FlxSpriteGroup
 	var lastBoxType:String = '';
 	function startNextDialog():Void
 	{
-		// Pls Fix munky
-		/*if (curCharacter == 'nate') {
-			blackbox.kill();
-		}*/
 		var curDialogue:DialogueLine = null;
 		do {
 			curDialogue = dialogueList.dialogue[currentText];
@@ -504,6 +505,9 @@ class DialogueBoxPsych extends FlxSpriteGroup
 
 		var char:DialogueCharacter = arrayCharacters[character];
 		if(char != null) {
+			if (char.curCharacter == "nate" && blackbox.alpha == 1) {
+				FlxTween.tween(blackbox, { alpha : 0}, 2);
+			}
 			char.playAnim(curDialogue.expression, daText.finishedText);
 			if(char.animation.curAnim != null) {
 				var rate:Float = 24 - (((curDialogue.speed - 0.05) / 5) * 480);
@@ -538,7 +542,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		} else {
 			box.offset.set(10, 0);
 		}
-		
+
 		if(!box.flipX) box.offset.y += 10;
 	}
 }
