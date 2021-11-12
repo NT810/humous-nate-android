@@ -62,12 +62,12 @@
 		0,
 		300
 	],
-	"healthicon": "face",
+	"healthicon": "ian",
 	"flip_x": true,
 	"healthbar_colors": [
-		183,
-		216,
-		85
+		146,
+		113,
+		253
 	],
 	"camera_position": [
 		-80,
