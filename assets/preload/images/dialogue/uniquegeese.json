@@ -1,24 +1,24 @@
 {
-	"dialogue_pos": "left",
 	"position": [
 		70,
 		30
 	],
+	"dialogue_pos": "left",
 	"scale": 1.25,
+	"image": "UNIQUEGEESE_PORTRAIT",
 	"animations": [
 		{
-			"loop_name": "UniquePeese PORTRAIT",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
 			"idle_offsets": [
 				0,
 				0
 			],
-			"idle_name": "",
-			"anim": "talk",
-			"loop_offsets": [
-				0,
-				0
-			]
+			"loop_name": "UniquePeese PORTRAIT",
+			"idle_name": "UniquePeese PORTRAIT0006"
 		}
-	],
-	"image": "UNIQUEGEESE_PORTRAIT"
+	]
 }

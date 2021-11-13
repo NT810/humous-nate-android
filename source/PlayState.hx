@@ -2652,12 +2652,23 @@ class PlayState extends MusicBeatState
 		FlxG.sound.music.volume = 0;
 		vocals.volume = 0;
 		vocals.pause();
-		if(ClientPrefs.noteOffset <= 0) {
-			finishCallback();
-		} else {
-			finishTimer = new FlxTimer().start(ClientPrefs.noteOffset / 1000, function(tmr:FlxTimer) {
+		if (curSong == "baja-blast" && isStoryMode) {
+			endingSong = true;
+			canPause = false;
+			var file:String = Paths.json("baja-blast/dialogue-after"); //Checks for json/Psych Engine dialogue
+			if (OpenFlAssets.exists(file)) {
+				startDialogue(DialogueBoxPsych.parseDialogue(file));
+			} else {
 				finishCallback();
-			});
+			}
+		}	else {
+			if(ClientPrefs.noteOffset <= 0) {
+				finishCallback();
+			} else {
+				finishTimer = new FlxTimer().start(ClientPrefs.noteOffset / 1000, function(tmr:FlxTimer) {
+					finishCallback();
+				});
+			}
 		}
 	}
 

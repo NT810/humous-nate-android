@@ -1,0 +1,81 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "fuck"
+		},
+		{
+			"speed": 0.02,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "holy shit bro you actually suck like got damn bro skill issue you are literally so bad i have never seen anyone worse than you in my entire life you will never be good at anything"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": ""
+		},
+		{
+			"speed": 0.02,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "you are talentless and stupid i can't believe how SHIT you are like holy fuck actually so trash"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "ayo my bad could you repeat that i couldn't hear you"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "no"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "ok well imma go try to find the bathroom"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "ok"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": ""
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Bruh I still can't find it"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "nate",
+			"boxState": "normal",
+			"expression": "idle",
+			"text": "*shits pants*"
+		}
+	]
+}
