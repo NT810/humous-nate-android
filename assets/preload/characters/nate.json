@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Nate_Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Nate_Idle"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				205,
 				-58
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Nate_Left"
+			"fps": 24,
+			"name": "Nate_Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				66,
 				-64
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Nate_Right"
+			"fps": 24,
+			"name": "Nate_Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				106,
-				17
+				-6
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Nate_Up"
+			"fps": 24,
+			"name": "Nate_Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				67,
 				-114
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Nate_Down"
+			"fps": 24,
+			"name": "Nate_Down",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -70,8 +70,8 @@
 		206
 	],
 	"camera_position": [
-		-40,
-		20
+		-140,
+		82
 	],
 	"sing_duration": 4.1,
 	"scale": 1

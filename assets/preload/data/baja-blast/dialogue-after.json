@@ -1,81 +1,74 @@
 {
 	"dialogue": [
 		{
-			"speed": 0.05,
-			"portrait": "nate",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "fuck"
+			"text": "fuck",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "nate"
 		},
 		{
+			"expression": "talk",
+			"text": "holy shit bro you actually suck like got damn bro skill issue you are literally so bad i have never seen anyone worse than you in my entire life you will never be good at anything",
+			"boxState": "normal",
 			"speed": 0.02,
-			"portrait": "bf",
-			"boxState": "normal",
-			"expression": "talk",
-			"text": "holy shit bro you actually suck like got damn bro skill issue you are literally so bad i have never seen anyone worse than you in my entire life you will never be good at anything"
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "nate",
-			"boxState": "normal",
 			"expression": "idle",
-			"text": ""
+			"text": "",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "nate"
 		},
 		{
+			"expression": "talk",
+			"text": "you are talentless and stupid i can't believe how SHIT you are like holy fuck actually so trash",
+			"boxState": "normal",
 			"speed": 0.02,
-			"portrait": "bf",
-			"boxState": "normal",
-			"expression": "talk",
-			"text": "you are talentless and stupid i can't believe how SHIT you are like holy fuck actually so trash"
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "nate",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "ayo my bad could you repeat that i couldn't hear you"
+			"text": "ayo my bad could you repeat that i couldn't hear you",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "nate"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "no"
+			"text": "no",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "nate",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "ok well imma go try to find the bathroom"
+			"text": "ok well imma go try to find the bathroom",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "nate"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "ok"
+			"text": "ok",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": ""
+			"text": "",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
 		},
 		{
-			"speed": 0.05,
-			"portrait": "nate",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "Bruh I still can't find it"
-		},
-		{
-			"speed": 0.05,
-			"portrait": "nate",
+			"text": "Bruh I still can't find it",
 			"boxState": "normal",
-			"expression": "idle",
-			"text": "*shits pants*"
+			"speed": 0.05,
+			"portrait": "nate"
 		}
 	]
 }
