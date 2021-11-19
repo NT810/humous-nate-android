@@ -2116,9 +2116,9 @@ class PlayState extends MusicBeatState
 
 					if (SONG.song.toLowerCase() == 'crucify')
 					{
-						if (health > 0.01)
+						if (health > 0.015)
 						{
-							health -= 0.01;
+							health -= 0.015;
 						}
 					}
 				}
