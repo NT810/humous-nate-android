@@ -2113,6 +2113,14 @@ class PlayState extends MusicBeatState
 						notes.remove(daNote, true);
 						daNote.destroy();
 					}
+
+					if (SONG.song.toLowerCase() == 'crucify')
+					{
+						if (health > 0.01)
+						{
+							health -= 0.01;
+						}
+					}
 				}
 
 				if(daNote.mustPress && cpuControlled) {
