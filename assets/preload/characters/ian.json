@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-3,
 				3
 			],
-			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Pico Idle Dance",
-			"indices": []
+			"indices": [],
+			"name": "Pico Idle Dance"
 		},
 		{
-			"offsets": [
-				64,
-				5
-			],
 			"loop": false,
+			"offsets": [
+				68,
+				4
+			],
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Pico Note Right0",
-			"indices": []
+			"indices": [],
+			"name": "Pico Note Right0"
 		},
 		{
-			"offsets": [
-				-37,
-				-8
-			],
 			"loop": false,
+			"offsets": [
+				-42,
+				-9
+			],
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "Pico NOTE LEFT0",
-			"indices": []
+			"indices": [],
+			"name": "Pico NOTE LEFT0"
 		},
 		{
-			"offsets": [
-				-41,
-				27
-			],
 			"loop": false,
-			"anim": "singUP",
+			"offsets": [
+				-36,
+				29
+			],
 			"fps": 24,
-			"name": "pico Up note0",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "pico Up note0"
 		},
 		{
+			"loop": false,
 			"offsets": [
-				196,
+				201,
 				-75
 			],
-			"loop": false,
-			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Pico Down Note0",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Pico Down Note0"
 		}
 	],
 	"no_antialiasing": false,
