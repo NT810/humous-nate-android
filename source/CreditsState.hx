@@ -24,6 +24,28 @@ class CreditsState extends MusicBeatState
 	private var iconArray:Array<AttachedSprite> = [];
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
+		["Taco Bell Tuesday"],
+		//["Music"],
+		["HugeNate", 				"nate", 		"Main week music, Crucify remix, Taco battle, Charting, Director", 'https://twitter.com/HugeNate_', 0xFF1AFCD4],
+		["Mind Of The Eye", "mote", 		"Main menu music", 							"https://twitter.com/MindoftheEye1", 0xFFDADADA],
+		["Jorclai",					"", 				"pause/game over music"],
+		//["Art"],
+		["ImBurger", 				"burger", 	"Nate and ian sprites, credits sprites, menu BG, health icons",	"https://twitter.com/MBorgor", 0xFF2E46C7],
+		["SajiArts", 				"", 				"Logo Art and UI design, Stage BG Art"],
+		["KaosKurve", 			"kaoskurve","Stage BG Art", 																								"", 0xFFF9A32B],
+		["Flan The Man", 		"", 				"Dialogue sprites, playable Nate stuff"],
+		//["Code"],
+		["Munkyfr",				 	"munky", 		"Code", 																"https://twitter.com/munkyfr_", 0xFFFF9048],
+		["MadBear422", 			"madbear", 	"Code", 																"https://youtube.com/channel/UCuUWs5LR42EaSwtI_IqxO-w", 0xFFFF0000],
+		["CrystalSlime", 		"", 				"Code",																	"https://www.youtube.com/c/CrystalSlime_TheCoolest/"],
+		["satellaviewlive", "", 				"Modchart"],
+		//["Chart"],
+		["Chromaatical", 		"chroma", 	"Charted first song", 									"https://twitter.com/chromaatical", 0xFFBE5252],
+		//["Special Thanks"],
+		["NonsenseHumor", 	"", 				"Nate Chromatic Scale"],
+		["TheMistake", 			"mistake", 	"Trailer"],
+		["Racckoon", 				"racckoon", "made the logo move"],
+
 		['Psych Engine Team'],
 		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFFFDD33],
 		['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',				'https://twitter.com/river_oaken',		0xFFC30085],
@@ -32,7 +54,7 @@ class CreditsState extends MusicBeatState
 		['shubs',				'shubs',			'New Input System Programmer',						'https://twitter.com/yoshubs',			0xFF4494E6],
 		['PolybiusProxy',		'polybiusproxy',	'.MP4 Video Loader Extension',						'https://twitter.com/polybiusproxy',	0xFFE01F32],
 		['gedehari',			'gedehari',			'Chart Editor\'s Sound Waveform base',				'https://twitter.com/gedehari',			0xFFFF9300],
-		['Keoiki',				'keoiki',			'Note Splash Animations',							'https://twitter.com/Keoiki_',			0xFFFFFFFF],
+		['Keoiki',				'keoiki',			'Note Splash Animations',															'https://twitter.com/Keoiki_',			0xFFFFFFFF],
 		['SandPlanet',			'sandplanet',		'Mascot\'s Owner\nMain Supporter of the Engine',		'https://twitter.com/SandPlanetNG',		0xFFD10616],
 		['bubba',				'bubba',		'Guest Composer for "Hot Dilf"',	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw',	0xFF61536A],
 		[''],
@@ -61,10 +83,18 @@ class CreditsState extends MusicBeatState
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
 
+		var dumbArray:Array<String> = ["music", "art", "code", "charting", "special thanks"];
+
 		for (i in 0...creditsStuff.length)
 		{
 			var isSelectable:Bool = !unselectableCheck(i);
-			var optionText:Alphabet = new Alphabet(0, 70 * i, creditsStuff[i][0], !isSelectable, false);
+			var bold:Bool = !isSelectable;
+			/*
+			if (!isSelectable) {
+				bold = dumbArray.contains(creditsStuff[i][0].toLowerCase());
+			}
+			*/
+			var optionText:Alphabet = new Alphabet(0, 70 * i, creditsStuff[i][0], bold, false);
 			optionText.isMenuItem = true;
 			optionText.screenCenter(X);
 			if(isSelectable) {
@@ -79,7 +109,7 @@ class CreditsState extends MusicBeatState
 				var icon:AttachedSprite = new AttachedSprite('credits/' + creditsStuff[i][1]);
 				icon.xAdd = optionText.width + 10;
 				icon.sprTracker = optionText;
-	
+
 				// using a FlxGroup is too much fuss!
 				iconArray.push(icon);
 				add(icon);
@@ -143,6 +173,9 @@ class CreditsState extends MusicBeatState
 		} while(unselectableCheck(curSelected));
 
 		var newColor:Int = creditsStuff[curSelected][4];
+		if (newColor == 0) {
+			newColor = 0xFFFDE871;
+		}
 		if(newColor != intendedColor) {
 			if(colorTween != null) {
 				colorTween.cancel();
