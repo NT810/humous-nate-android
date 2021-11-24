@@ -140,7 +140,7 @@ class StoryMenuState extends MusicBeatState
 		sprDifficultyGroup = new FlxTypedGroup<FlxSprite>();
 		add(sprDifficultyGroup);
 
-		
+
 		for (i in 0...CoolUtil.difficultyStuff.length) {
 			var sprDifficulty:FlxSprite = new FlxSprite(leftArrow.x + 60, leftArrow.y).loadGraphic(Paths.image('menudifficulties/' + CoolUtil.difficultyStuff[i][0].toLowerCase()));
 			sprDifficulty.x += (308 - sprDifficulty.width) / 2;
@@ -264,41 +264,45 @@ class StoryMenuState extends MusicBeatState
 	{
 		if (!weekIsLocked(curWeek))
 		{
-			if (stopspamming == false)
-			{
-				FlxG.sound.play(Paths.sound('confirmMenu'));
+			if (WeekData.weeksList[curWeek] != "weekpoop") {
+				if (stopspamming == false)
+				{
+					FlxG.sound.play(Paths.sound('confirmMenu'));
 
-				grpWeekText.members[curWeek].startFlashing();
-				if(grpWeekCharacters.members[1].character != '') grpWeekCharacters.members[1].animation.play('confirm');
-				stopspamming = true;
+					grpWeekText.members[curWeek].startFlashing();
+					if(grpWeekCharacters.members[1].character != '') grpWeekCharacters.members[1].animation.play('confirm');
+					stopspamming = true;
+				}
+
+				// We can't use Dynamic Array .copy() because that crashes HTML5, here's a workaround.
+				var songArray:Array<String> = [];
+				var leWeek:Array<Dynamic> = WeekData.weeksLoaded.get(WeekData.weeksList[curWeek]).songs;
+				for (i in 0...leWeek.length) {
+					songArray.push(leWeek[i][0]);
+				}
+
+				// Nevermind that's stupid lmao
+				PlayState.storyPlaylist = songArray;
+				PlayState.isStoryMode = true;
+				selectedWeek = true;
+
+				var diffic = CoolUtil.difficultyStuff[curDifficulty][1];
+				if(diffic == null) diffic = '';
+
+				PlayState.storyDifficulty = curDifficulty;
+
+				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+				PlayState.storyWeek = curWeek;
+				PlayState.campaignScore = 0;
+				PlayState.campaignMisses = 0;
+				new FlxTimer().start(1, function(tmr:FlxTimer)
+				{
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+					FreeplayState.destroyFreeplayVocals();
+				});
+			} else {
+				CoolUtil.browserLoad("https://gamebanana.com/mods/321848");
 			}
-
-			// We can't use Dynamic Array .copy() because that crashes HTML5, here's a workaround.
-			var songArray:Array<String> = [];
-			var leWeek:Array<Dynamic> = WeekData.weeksLoaded.get(WeekData.weeksList[curWeek]).songs;
-			for (i in 0...leWeek.length) {
-				songArray.push(leWeek[i][0]);
-			}
-
-			// Nevermind that's stupid lmao
-			PlayState.storyPlaylist = songArray;
-			PlayState.isStoryMode = true;
-			selectedWeek = true;
-
-			var diffic = CoolUtil.difficultyStuff[curDifficulty][1];
-			if(diffic == null) diffic = '';
-
-			PlayState.storyDifficulty = curDifficulty;
-
-			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-			PlayState.storyWeek = curWeek;
-			PlayState.campaignScore = 0;
-			PlayState.campaignMisses = 0;
-			new FlxTimer().start(1, function(tmr:FlxTimer)
-			{
-				LoadingState.loadAndSwitchState(new PlayState(), true);
-				FreeplayState.destroyFreeplayVocals();
-			});
 		} else {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}
@@ -316,7 +320,7 @@ class StoryMenuState extends MusicBeatState
 		sprDifficultyGroup.forEach(function(spr:FlxSprite) {
 			spr.visible = false;
 			if(curDifficulty == spr.ID) {
-				spr.visible = true;
+				spr.visible = WeekData.weeksList[curWeek] != "weekpoop";
 				spr.alpha = 0;
 				spr.y = leftArrow.y - 15;
 				FlxTween.tween(spr, {y: leftArrow.y + 15, alpha: 1}, 0.07);
@@ -340,12 +344,23 @@ class StoryMenuState extends MusicBeatState
 		if (curWeek < 0)
 			curWeek = WeekData.weeksList.length - 1;
 
+		if (WeekData.weeksList[curWeek] == "weekpoop") {
+			leftArrow.visible = false;
+			rightArrow.visible = false;
+			sprDifficultyGroup.forEach(function(spr:FlxSprite) { spr.visible = false; });
+		} else {
+			leftArrow.visible = true;
+			rightArrow.visible = true;
+			changeDifficulty(0);
+		}
+
 		var leWeek:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[curWeek]);
 		WeekData.setDirectoryFromWeek(leWeek);
 
 		var leName:String = leWeek.storyName;
 		txtWeekTitle.text = leName.toUpperCase();
 		txtWeekTitle.x = FlxG.width - (txtWeekTitle.width + 10);
+
 
 		var bullShit:Int = 0;
 

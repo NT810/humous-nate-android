@@ -1,0 +1,10 @@
+{
+	"idle_anim": "M Poop Idle",
+	"image": "Menu_Poop",
+	"position": [
+		72,
+		-162
+	],
+	"scale": 0.95,
+	"confirm_anim": "M Dad Idle"
+}

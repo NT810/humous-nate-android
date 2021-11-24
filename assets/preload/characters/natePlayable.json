@@ -8,52 +8,96 @@
 			"indices": [],
 			"fps": 24,
 			"anim": "idle",
-			"loop": true,
+			"loop": false,
 			"name": "Nate_Idle"
 		},
 		{
 			"offsets": [
-				75,
-				10
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singUP",
-			"loop": true,
-			"name": "Nate_Up"
-		},
-		{
-			"offsets": [
-				220,
+				254,
 				-110
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": true,
-			"name": "Nate_Down"
-		},
-		{
-			"offsets": [
-				100,
-				-50
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singRIGHT",
-			"loop": true,
-			"name": "Nate_Left"
+			"loop": false,
+			"name": "Nate_Down0"
 		},
 		{
 			"offsets": [
 				110,
+				-60
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Nate_Left0"
+		},
+		{
+			"offsets": [
+				105,
+				-10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Nate_Up0"
+		},
+		{
+			"offsets": [
+				160,
 				-50
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": true,
-			"name": "Nate_Right"
+			"loop": false,
+			"name": "Nate_Right0"
+		},
+		{
+			"offsets": [
+				160,
+				-50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "Nate_Right_Miss"
+		},
+		{
+			"offsets": [
+				150,
+				0
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "Nate_Up_Miss"
+		},
+		{
+			"offsets": [
+				250,
+				-100
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "Nate_Down_Miss"
+		},
+		{
+			"offsets": [
+				110,
+				-70
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "Nate_Left_Miss"
 		}
 	],
 	"no_antialiasing": false,

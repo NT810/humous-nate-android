@@ -1,0 +1,48 @@
+{
+	"songs": [
+		[
+			"none lol",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"this opens a link",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"to da poop mod",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hideFreeplay": true,
+	"weekBackground": "bathroom",
+	"weekCharacters": [
+		"poop",
+		"bf",
+		"gf"
+	],
+	"storyName": "afterstory",
+	"weekName": "weekpoop",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}
