@@ -307,7 +307,7 @@ class PlayState extends MusicBeatState
 		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
 			switch (songName)
 			{
-				case 'taco' | 'bafroom' | 'baja-blast':
+				case 'taco' | 'bafroom' | 'baja-blast' | 'green-flames':
 					curStage = 'tacobell';
 				case 'spookeez' | 'south' | 'monster':
 					curStage = 'spooky';

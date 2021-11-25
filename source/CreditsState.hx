@@ -27,8 +27,9 @@ class CreditsState extends MusicBeatState
 		["Taco Bell Tuesday"],
 		//["Music"],
 		["HugeNate", 				"nate", 		"All Playable Music, Charting, Director, Writer", 'https://twitter.com/HugeNate_', 0xFF1AFCD4],
-		["Mind Of The Eye", "mote", 		"Main menu music", 							"https://twitter.com/MindoftheEye1", 0xFFDADADA],
-		["Jorclai",					"", 				"pause/game over music"],
+		["Mind Of The Eye", "mote", 		"Main Menu music", 																"https://twitter.com/MindoftheEye1", 0xFFDADADA],
+		["Coquers",					"", 				"Green Flames", 																	"https://twitter.com/Coquers1", 0xFF4F5662],
+		["Jorclai",					"", 				"Pause / Game Over music"],
 		//["Art"],
 		["ImBurger", 				"burger", 	"Nate and ian sprites, menu BG, health icons",	"https://twitter.com/MBorgor", 0xFF2E46C7],
 		["SajiArts", 				"", 				"Logo Art and UI design, Stage BG Art, Cameos"],
@@ -173,9 +174,7 @@ class CreditsState extends MusicBeatState
 		} while(unselectableCheck(curSelected));
 
 		var newColor:Int = creditsStuff[curSelected][4];
-		if (newColor == 0) {
-			newColor = 0xFFFDE871;
-		}
+
 		if(newColor != intendedColor) {
 			if(colorTween != null) {
 				colorTween.cancel();
