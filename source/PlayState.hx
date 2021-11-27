@@ -998,7 +998,6 @@ class PlayState extends MusicBeatState
 			FlxG.log.warn('Your dialogue file is badly formatted!');
 			if(endingSong) {
 				endSong();
-				if (isStoryMode && curSong == "baja-blast") FlxG.sound.play(Paths.sound("funny_fart"), 0.6);
 			} else {
 				startCountdown();
 			}
@@ -2749,6 +2748,7 @@ class PlayState extends MusicBeatState
 
 			if (isStoryMode)
 			{
+				if (curSong == "baja-blast") FlxG.sound.play(Paths.sound("funny_fart"), 0.6);
 				campaignScore += songScore;
 				campaignMisses += songMisses;
 
