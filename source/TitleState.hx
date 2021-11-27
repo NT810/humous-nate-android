@@ -9,6 +9,7 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.input.keyboard.FlxKey;
 import flixel.addons.display.FlxGridOverlay;
+import flixel.addons.display.FlxBackdrop;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
@@ -51,6 +52,11 @@ class TitleState extends MusicBeatState
 	var easterEggEnabled:Bool = true; //Disable this to hide the easter egg
 	var easterEggKeyCombination:Array<FlxKey> = [FlxKey.B, FlxKey.B]; //bb stands for bbpanzu cuz he wanted this lmao
 	var lastKeysPressed:Array<FlxKey> = [];
+
+	var bgScroll:FlxBackdrop;
+	var colorArray:Array<Int> = [0xFF00febf, 0xFF9f469d, 0xFFfb95c7, 0xFFed208f, 0xFF3e4698, 0xFFfee612];
+	var curColor:Int = 0xFF00febf;
+	var nextColor:Int;
 
 	override public function create():Void
 	{
@@ -165,6 +171,14 @@ class TitleState extends MusicBeatState
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
 		add(bg);
+
+		bgScroll = new FlxBackdrop(Paths.image("tacoNeon"));
+		bgScroll.antialiasing = ClientPrefs.globalAntialiasing;
+		bgScroll.velocity.set(40, 40);
+		bgScroll.useScaleHack = false;
+		add(bgScroll);
+
+		changeColor();
 
 		var topBar:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('topBar'));
 		topBar.y -= 100;
@@ -507,5 +521,17 @@ class TitleState extends MusicBeatState
 			remove(credGroup);
 			skippedIntro = true;
 		}
+	}
+	function changeColor(?tween:FlxTween = null) {
+		if (tween != null) tween.cancel(); // just so you can use changeColor without a tween
+		if (nextColor != 0) curColor = nextColor;
+		nextColor = rollColor();
+		FlxTween.color(bgScroll, 10, curColor, nextColor, { onComplete: changeColor });
+	}
+
+	function rollColor():Int {
+		var color:Int = colorArray[Math.floor(Math.random()*(colorArray.length))];
+		if (color == curColor) return rollColor();
+		else return color;
 	}
 }
