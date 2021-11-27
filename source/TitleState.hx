@@ -137,7 +137,7 @@ class TitleState extends MusicBeatState
 				new FlxRect(-300, -300, FlxG.width * 1.8, FlxG.height * 1.8));
 			FlxTransitionableState.defaultTransOut = new TransitionData(FADE, FlxColor.BLACK, 0.7, new FlxPoint(0, 1),
 				{asset: diamond, width: 32, height: 32}, new FlxRect(-300, -300, FlxG.width * 1.8, FlxG.height * 1.8));
-				
+
 			transIn = FlxTransitionableState.defaultTransIn;
 			transOut = FlxTransitionableState.defaultTransOut;*/
 
@@ -166,8 +166,19 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
+		var topBar:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('topBar'));
+		topBar.y -= 100;
+		topBar.antialiasing = ClientPrefs.globalAntialiasing;
+		add(topBar);
+
+		var bottomBar:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bottomBar'));
+		bottomBar.y = FlxG.height - bottomBar.height + 100;
+		bottomBar.antialiasing = ClientPrefs.globalAntialiasing;
+		add(bottomBar);
+
 		logoBl = new FlxSprite(-150, -100);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
+		// logoBl.setGraphicSize(Std.int(logoBl.width * 0.9));
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
 		logoBl.animation.play('bump');
@@ -177,10 +188,11 @@ class TitleState extends MusicBeatState
 
 		swagShader = new ColorSwap();
 		if(!FlxG.save.data.psykaEasterEgg || !easterEggEnabled) {
-			gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
-			gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-			gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-			gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+			gfDance = new FlxSprite(FlxG.width * 0.6, FlxG.height * 0.03);
+			gfDance.frames = Paths.getSparrowAtlas('ManuNate');
+			gfDance.setGraphicSize(Std.int(gfDance.width * 0.9));
+			gfDance.animation.addByIndices('danceLeft', 'Menu Nate', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+			gfDance.animation.addByIndices('danceRight', 'Menu Nate', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		}
 		else //Psyka easter egg
 		{
@@ -234,6 +246,7 @@ class TitleState extends MusicBeatState
 		logoSpr.updateHitbox();
 		logoSpr.screenCenter(X);
 		logoSpr.antialiasing = ClientPrefs.globalAntialiasing;
+
 
 		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
 
@@ -328,7 +341,7 @@ class TitleState extends MusicBeatState
 					{
 						lastKeysPressed.shift();
 					}
-					
+
 					if(lastKeysPressed.length == easterEggKeyCombination.length)
 					{
 						var isDifferent:Bool = false;
@@ -415,7 +428,7 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
-		if(logoBl != null) 
+		if(logoBl != null)
 			logoBl.animation.play('bump');
 
 		if(gfDance != null) {

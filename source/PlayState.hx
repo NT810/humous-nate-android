@@ -998,6 +998,7 @@ class PlayState extends MusicBeatState
 			FlxG.log.warn('Your dialogue file is badly formatted!');
 			if(endingSong) {
 				endSong();
+				if (isStoryMode && curSong == "baja-blast") FlxG.sound.play(Paths.sound("funny_fart"), 0.6);
 			} else {
 				startCountdown();
 			}
@@ -2663,6 +2664,9 @@ class PlayState extends MusicBeatState
 		if (curSong == "baja-blast" && isStoryMode) {
 			endingSong = true;
 			canPause = false;
+			timeBarBG.visible = false;
+			timeBar.visible = false;
+			timeTxt.visible = false;
 			var file:String = Paths.json("baja-blast/dialogue-after"); //Checks for json/Psych Engine dialogue
 			if (OpenFlAssets.exists(file)) {
 				startDialogue(DialogueBoxPsych.parseDialogue(file));

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ManuNate.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Menu Nate0000" x="0" y="0" width="390" height="730" frameX="-1" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0001" x="0" y="0" width="390" height="730" frameX="-1" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0002" x="437" y="0" width="392" height="730" frameX="0" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0003" x="437" y="0" width="392" height="730" frameX="0" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0004" x="876" y="0" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0005" x="876" y="0" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0006" x="1309" y="0" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0007" x="1742" y="0" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0008" x="2175" y="0" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0009" x="2175" y="0" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0010" x="2608" y="0" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0011" x="2608" y="0" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0012" x="3041" y="0" width="386" height="731" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0013" x="3041" y="0" width="386" height="731" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0014" x="3474" y="0" width="386" height="731" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0015" x="3474" y="0" width="386" height="731" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0016" x="0" y="779" width="389" height="731" frameX="-2" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0017" x="0" y="779" width="389" height="731" frameX="-2" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0018" x="436" y="779" width="392" height="730" frameX="0" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0019" x="436" y="779" width="392" height="730" frameX="0" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0020" x="875" y="779" width="386" height="731" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0021" x="875" y="779" width="386" height="731" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0022" x="1308" y="779" width="386" height="731" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0023" x="1308" y="779" width="386" height="731" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0024" x="1741" y="779" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0025" x="1741" y="779" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0026" x="1741" y="779" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0027" x="2174" y="779" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0028" x="2174" y="779" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+	<SubTexture name="Menu Nate0029" x="2174" y="779" width="386" height="732" frameX="-4" frameY="0" frameWidth="392" frameHeight="732"/>
+</TextureAtlas>
