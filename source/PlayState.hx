@@ -385,57 +385,33 @@ class PlayState extends MusicBeatState
 
 			case 'tacobell':
 				var bgZoom:Float = 1.2;
+
 				var bg:BGSprite = new BGSprite('tacobell/background', -150, 0);
 				bg.setGraphicSize(Std.int(bg.width * bgZoom));
 				bg.screenCenter();
 
-				var weirdlosslookinshit = new BGSprite('tacobell/weirdlosslookinshit', -150, 0);
-				weirdlosslookinshit.setGraphicSize(Std.int(weirdlosslookinshit.width * bgZoom));
-				weirdlosslookinshit.screenCenter();
+				var tableLeft = new BGSprite('tacobell/tableLeft', -150, 0);
+				tableLeft.setGraphicSize(Std.int(tableLeft.width * bgZoom));
+				tableLeft.screenCenter();
 
-				var till = new BGSprite('tacobell/till', -150, 0);
-				till.setGraphicSize(Std.int(till.width * bgZoom));
-				till.screenCenter();
+				var tableRight = new BGSprite('tacobell/tableRight', -150, 0);
+				tableRight.setGraphicSize(Std.int(tableRight.width * bgZoom));
+				tableRight.screenCenter();
 
-				var tablebackleft = new BGSprite('tacobell/tablebackleft', -150, 0);
-				tablebackleft.setGraphicSize(Std.int(tablebackleft.width * bgZoom));
-				tablebackleft.screenCenter();
-				var tablebackright = new BGSprite('tacobell/tablebackright', -150, 0);
-				tablebackright.setGraphicSize(Std.int(tablebackright.width * bgZoom));
-				tablebackright.screenCenter();
+				var chairsLeft = new BGSprite('tacobell/chairsLeft', -150, 0);
+				chairsLeft.setGraphicSize(Std.int(chairsLeft.width * bgZoom));
+				chairsLeft.screenCenter();
 
-				var tableleft = new BGSprite('tacobell/tableleft', -150, 0);
-				tableleft.setGraphicSize(Std.int(tableleft.width * bgZoom));
-				tableleft.screenCenter();
-				var tableright = new BGSprite('tacobell/tableright', -150, 0);
-				tableright.setGraphicSize(Std.int(tableright.width * bgZoom));
-				tableright.screenCenter();
-
-				var leftchairs = new BGSprite('tacobell/leftchairs', -150, 0);
-				leftchairs.setGraphicSize(Std.int(leftchairs.width * bgZoom));
-				leftchairs.screenCenter();
-				var rightchairs = new BGSprite('tacobell/rightchairs', -150, 0);
-				rightchairs.setGraphicSize(Std.int(rightchairs.width * bgZoom));
-				rightchairs.screenCenter();
-
-				var tableedgeleft = new BGSprite('tacobell/tableedgeleft', -150, 0);
-				tableedgeleft.setGraphicSize(Std.int(tableedgeleft.width * bgZoom));
-				tableedgeleft.screenCenter();
-				var tableedgeright = new BGSprite('tacobell/tableedgeright', -150, 0);
-				tableedgeright.setGraphicSize(Std.int(tableedgeright.width * bgZoom));
-				tableedgeright.screenCenter();
+				var chairsRight = new BGSprite('tacobell/chairsRight', -150, 0);
+				chairsRight.setGraphicSize(Std.int(chairsRight.width * bgZoom));
+				chairsRight.screenCenter();
 
 				add(bg);
-				add(weirdlosslookinshit);
-				add(till);
-				add(tablebackright);
-				add(tablebackleft);
-				add(tableright);
-				add(tableleft);
-				// add(rightchairs);
-				// add(leftchairs);
-				add(tableedgeright);
-				add(tableedgeleft);
+				add(tableLeft);
+				add(tableRight);
+				add(chairsLeft);
+				add(chairsRight);
+
 				//HELP
 			case "outside":
 				var sky = new BGSprite("outside/sky", 0, 0, 0.85, 0.15);
@@ -2748,7 +2724,7 @@ class PlayState extends MusicBeatState
 
 			if (isStoryMode)
 			{
-				if (curSong == "baja-blast") FlxG.sound.play(Paths.sound("funny_fart"), 0.6);
+				if (curSong == "baja-blast") FlxG.sound.play(Paths.sound("funny_fart"), 1.5);
 				campaignScore += songScore;
 				campaignMisses += songMisses;
 

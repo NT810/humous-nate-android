@@ -9,7 +9,6 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.input.keyboard.FlxKey;
 import flixel.addons.display.FlxGridOverlay;
-import flixel.addons.display.FlxBackdrop;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
@@ -39,6 +38,9 @@ class TitleState extends MusicBeatState
 
 	static var initialized:Bool = false;
 
+	var topBar:FlxSprite;
+	var bottomBar:FlxSprite;
+
 	var blackScreen:FlxSprite;
 	var credGroup:FlxGroup;
 	var credTextShit:Alphabet;
@@ -53,10 +55,7 @@ class TitleState extends MusicBeatState
 	var easterEggKeyCombination:Array<FlxKey> = [FlxKey.B, FlxKey.B]; //bb stands for bbpanzu cuz he wanted this lmao
 	var lastKeysPressed:Array<FlxKey> = [];
 
-	var bgScroll:FlxBackdrop;
-	var colorArray:Array<Int> = [0xFF00febf, 0xFF9f469d, 0xFFfb95c7, 0xFFed208f, 0xFF3e4698, 0xFFfee612];
-	var curColor:Int = 0xFF00febf;
-	var nextColor:Int;
+	var bgScroll:CoolBG;
 
 	override public function create():Void
 	{
@@ -172,21 +171,16 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
-		bgScroll = new FlxBackdrop(Paths.image("tacoNeon"));
-		bgScroll.antialiasing = ClientPrefs.globalAntialiasing;
-		bgScroll.velocity.set(40, 40);
-		bgScroll.useScaleHack = false;
+		bgScroll = new CoolBG();
 		add(bgScroll);
 
-		changeColor();
-
-		var topBar:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('topBar'));
-		topBar.y -= 100;
+		topBar = new FlxSprite(0, 0).loadGraphic(Paths.image('topBar'));
+		topBar.y -= 650;
 		topBar.antialiasing = ClientPrefs.globalAntialiasing;
 		add(topBar);
 
-		var bottomBar:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bottomBar'));
-		bottomBar.y = FlxG.height - bottomBar.height + 100;
+		bottomBar = new FlxSprite(0, 0).loadGraphic(Paths.image('bottomBar'));
+		bottomBar.y = FlxG.height - bottomBar.height + 650;
 		bottomBar.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bottomBar);
 
@@ -334,6 +328,15 @@ class TitleState extends MusicBeatState
 				if(titleText != null) titleText.animation.play('press');
 
 				FlxG.camera.flash(FlxColor.WHITE, 1);
+
+				FlxTween.tween(logoBl, { x: logoBl.x - 900 }, 0.5, { ease: FlxEase.backIn });
+				FlxTween.tween(gfDance, { x: gfDance.x + 500 }, 0.5, { ease: FlxEase.backIn });
+
+				FlxTween.tween(topBar, { y: topBar.y + 225}, 0.75, { ease: FlxEase.backIn });
+				FlxTween.tween(bottomBar, { y: bottomBar.y - 225 }, 0.75, { ease: FlxEase.backIn });
+
+				FlxTween.tween(titleText, { y: titleText.y + 200 }, 0.5, { ease: FlxEase.backIn });
+
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
 				transitioning = true;
@@ -521,17 +524,5 @@ class TitleState extends MusicBeatState
 			remove(credGroup);
 			skippedIntro = true;
 		}
-	}
-	function changeColor(?tween:FlxTween = null) {
-		if (tween != null) tween.cancel(); // just so you can use changeColor without a tween
-		if (nextColor != 0) curColor = nextColor;
-		nextColor = rollColor();
-		FlxTween.color(bgScroll, 10, curColor, nextColor, { onComplete: changeColor });
-	}
-
-	function rollColor():Int {
-		var color:Int = colorArray[Math.floor(Math.random()*(colorArray.length))];
-		if (color == curColor) return rollColor();
-		else return color;
 	}
 }
