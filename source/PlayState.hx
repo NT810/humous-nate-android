@@ -1,5 +1,6 @@
 package;
 
+import flixel.ui.FlxSpriteButton;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -203,6 +204,9 @@ class PlayState extends MusicBeatState
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
 	var heyTimer:Float;
+
+	var backcameos:FlxSprite;
+	var frontcameos:FlxSprite;
 
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
@@ -428,6 +432,23 @@ class PlayState extends MusicBeatState
 				building.setGraphicSize(Std.int(building.width * 1.2));
 				building.screenCenter();
 				add(building);
+
+				backcameos = new FlxSprite(0, 0);
+				backcameos.frames = Paths.getSparrowAtlas("outside/cameos_back");
+				backcameos.animation.addByPrefix('bop', "cameos_back", 24, false);
+				backcameos.antialiasing = FlxG.save.data.antialiasing;
+				backcameos.setGraphicSize(Std.int(backcameos.width * 1.2));
+				backcameos.screenCenter();
+				add(backcameos);
+
+				frontcameos = new FlxSprite(0, 0);
+				frontcameos.frames = Paths.getSparrowAtlas("outside/cameos_front");
+				frontcameos.animation.addByPrefix('bop', "cameos_front", 24, false);
+				frontcameos.antialiasing = FlxG.save.data.antialiasing;
+				frontcameos.setGraphicSize(Std.int(frontcameos.width * 1.2));
+				frontcameos.screenCenter();
+				add(frontcameos);
+
 
 				var lights = new BGSprite("outside/lights", 0, 0);
 				lights.setGraphicSize(Std.int(lights.width * 1.2));
@@ -3576,6 +3597,15 @@ class PlayState extends MusicBeatState
 			trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);
 			return;
 		}
+
+		if (curStage == 'outside')
+			{
+				if (curBeat % 4 == 0)
+					{
+						backcameos.animation.play('bop', true);
+						frontcameos.animation.play('bop', true);
+					}
+			}
 
 		if (generatedMusic)
 		{
