@@ -390,31 +390,20 @@ class PlayState extends MusicBeatState
 			case 'tacobell':
 				var bgZoom:Float = 1.2;
 
-				var bg:BGSprite = new BGSprite('tacobell/background', -150, 0);
-				bg.setGraphicSize(Std.int(bg.width * bgZoom));
-				bg.screenCenter();
+				var dumbGroup:FlxTypedGroup<BGSprite> = new FlxTypedGroup<BGSprite>();
+				add(dumbGroup);
+				dumbGroup.add(new BGSprite('tacobell/background', 0, 0));
+				dumbGroup.add(new BGSprite('tacobell/till', 0, 0));
+				dumbGroup.add(new BGSprite('tacobell/tableLeft', 0, 0));
+				dumbGroup.add(new BGSprite('tacobell/tableRight', 0, 0));
+				dumbGroup.add(new BGSprite('tacobell/chairsLeft', 0, 0));
+				dumbGroup.add(new BGSprite('tacobell/chairsRight', 0, 0));
 
-				var tableLeft = new BGSprite('tacobell/tableLeft', -150, 0);
-				tableLeft.setGraphicSize(Std.int(tableLeft.width * bgZoom));
-				tableLeft.screenCenter();
-
-				var tableRight = new BGSprite('tacobell/tableRight', -150, 0);
-				tableRight.setGraphicSize(Std.int(tableRight.width * bgZoom));
-				tableRight.screenCenter();
-
-				var chairsLeft = new BGSprite('tacobell/chairsLeft', -150, 0);
-				chairsLeft.setGraphicSize(Std.int(chairsLeft.width * bgZoom));
-				chairsLeft.screenCenter();
-
-				var chairsRight = new BGSprite('tacobell/chairsRight', -150, 0);
-				chairsRight.setGraphicSize(Std.int(chairsRight.width * bgZoom));
-				chairsRight.screenCenter();
-
-				add(bg);
-				add(tableLeft);
-				add(tableRight);
-				add(chairsLeft);
-				add(chairsRight);
+				dumbGroup.forEach(function (sprite:BGSprite) {
+					sprite.setGraphicSize(Std.int(sprite.width * bgZoom));
+					sprite.screenCenter();
+					sprite.y -= 40;
+				});
 
 				//HELP
 			case "outside":
