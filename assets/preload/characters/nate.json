@@ -1,70 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				10,
 				10
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Nate_Idle"
+			"fps": 24,
+			"name": "Nate_Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				86,
 				-54
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Nate_Left_Playable"
+			"fps": 24,
+			"name": "Nate_Left_Playable",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				85,
 				-104
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Nate_Down_Playable"
+			"fps": 24,
+			"name": "Nate_Down_Playable",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				205,
 				-58
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Nate_Right_Playable"
+			"fps": 24,
+			"name": "Nate_Right_Playable",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				116,
 				-6
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Nate_Up_Playable"
+			"fps": 24,
+			"name": "Nate_Up_Playable",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				29,
 				21
 			],
+			"anim": "eatTaco",
+			"fps": 24,
+			"name": "Nate_EatingTaco",
+			"indices": []
+		},
+		{
+			"offsets": [
+				30,
+				20
+			],
 			"indices": [],
 			"fps": 24,
-			"anim": "eatTaco",
+			"anim": "eatShit",
 			"loop": false,
-			"name": "Nate_EatingTaco"
+			"name": "Nate_EatingShit"
 		}
 	],
 	"no_antialiasing": false,
