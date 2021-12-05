@@ -5,76 +5,21 @@
 				0,
 				10
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "Nate_Idle"
-		},
-		{
-			"offsets": [
-				254,
-				-110
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singDOWN",
-			"loop": false,
-			"name": "Nate_Down0"
-		},
-		{
-			"offsets": [
-				110,
-				-60
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singRIGHT",
-			"loop": false,
-			"name": "Nate_Left0"
-		},
-		{
-			"offsets": [
-				105,
-				-10
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singUP",
-			"loop": false,
-			"name": "Nate_Up0"
-		},
-		{
-			"offsets": [
-				160,
-				-50
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singLEFT",
-			"loop": false,
-			"name": "Nate_Right0"
-		},
-		{
-			"offsets": [
-				160,
-				-50
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singLEFTmiss",
-			"loop": false,
-			"name": "Nate_Right_Miss"
 		},
 		{
 			"offsets": [
 				150,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 25,
 			"anim": "singUPmiss",
-			"loop": false,
+			"indices": [],
 			"name": "Nate_Up_Miss"
 		},
 		{
@@ -82,32 +27,120 @@
 				250,
 				-100
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWNmiss",
-			"loop": false,
+			"indices": [],
 			"name": "Nate_Down_Miss"
 		},
 		{
+			"loop": false,
+			"offsets": [
+				254,
+				-110
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Nate_Down_Playable",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				-60
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Nate_Right_Playable",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				160,
+				-50
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Nate_Left_Playable",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				105,
+				-10
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Nate_Up_Playable",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				110,
 				-70
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Nate_Right_Miss",
+			"indices": []
+		},
+		{
 			"loop": false,
-			"name": "Nate_Left_Miss"
+			"offsets": [
+				160,
+				-50
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "Nate_Left_Miss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				30,
+				27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "Nat_Death"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				55
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "Nate_Death_Retry",
+			"indices": []
+		},
+		{
+			"offsets": [
+				30,
+				21
+			],
+			"loop": true,
+			"fps": 25,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "Nate_Death_Loop"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/nate",
+	"image": "characters/playableNate",
 	"position": [
 		200,
 		100
 	],
 	"healthicon": "nate",
-	"flip_x": false,
+	"flip_x": true,
 	"healthbar_colors": [
 		55,
 		255,
