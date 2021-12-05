@@ -441,7 +441,7 @@ class PlayState extends MusicBeatState
 				backcameos.frames = Paths.getSparrowAtlas("outside/cameos_back");
 				backcameos.animation.addByPrefix('bop', "cameos_back", 24, false);
 				backcameos.antialiasing = antialias;
-				backcameos.setGraphicSize(Std.int(backcameos.width * 1.8));
+				backcameos.setGraphicSize(Std.int(backcameos.width * 1.2));
 				backcameos.screenCenter();
 				add(backcameos);
 
@@ -449,7 +449,7 @@ class PlayState extends MusicBeatState
 				frontcameos.frames = Paths.getSparrowAtlas("outside/cameos_front");
 				frontcameos.animation.addByPrefix('bop', "cameos_front", 24, false);
 				frontcameos.antialiasing = antialias;
-				frontcameos.setGraphicSize(Std.int(frontcameos.width * 1.5));
+				frontcameos.setGraphicSize(Std.int(frontcameos.width * 1.2));
 				frontcameos.screenCenter();
 				add(frontcameos);
 
