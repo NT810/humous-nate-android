@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tacobellcrowdslol.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="taco bell crowd instance 10000" x="100" y="100" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10001" x="100" y="100" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10002" x="100" y="600" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10003" x="100" y="600" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10004" x="100" y="1100" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10005" x="100" y="1100" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10006" x="100" y="1600" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10007" x="100" y="1600" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10008" x="100" y="1600" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10009" x="100" y="1600" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10010" x="100" y="1600" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10011" x="100" y="1600" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10012" x="100" y="1600" width="1130" height="400"/>
+	<SubTexture name="taco bell crowd instance 10013" x="100" y="1600" width="1130" height="400"/>
+</TextureAtlas>

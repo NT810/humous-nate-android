@@ -408,6 +408,16 @@ class PlayState extends MusicBeatState
 					sprite.y -= 40;
 				});
 
+				var antialias:Bool = ClientPrefs.globalAntialiasing;
+
+				backcameos = new FlxSprite(0, 0);
+				backcameos.frames = Paths.getSparrowAtlas("tacobell/tacobellcrowdslol");
+				backcameos.animation.addByPrefix('bop', "taco bell crowd instance ", 24, false);
+				backcameos.setGraphicSize(Std.int(backcameos.width * 1.5));
+				backcameos.antialiasing = antialias;
+				backcameos.screenCenter(Y);
+				add(backcameos);
+
 				//HELP
 			case "outside":
 				var sky = new BGSprite("outside/sky", 0, 0, 0.85, 0.15);
@@ -431,7 +441,7 @@ class PlayState extends MusicBeatState
 				backcameos.frames = Paths.getSparrowAtlas("outside/cameos_back");
 				backcameos.animation.addByPrefix('bop', "cameos_back", 24, false);
 				backcameos.antialiasing = antialias;
-				backcameos.setGraphicSize(Std.int(backcameos.width * 1.2));
+				backcameos.setGraphicSize(Std.int(backcameos.width * 1.8));
 				backcameos.screenCenter();
 				add(backcameos);
 
@@ -439,7 +449,7 @@ class PlayState extends MusicBeatState
 				frontcameos.frames = Paths.getSparrowAtlas("outside/cameos_front");
 				frontcameos.animation.addByPrefix('bop', "cameos_front", 24, false);
 				frontcameos.antialiasing = antialias;
-				frontcameos.setGraphicSize(Std.int(frontcameos.width * 1.2));
+				frontcameos.setGraphicSize(Std.int(frontcameos.width * 1.5));
 				frontcameos.screenCenter();
 				add(frontcameos);
 
@@ -835,7 +845,7 @@ class PlayState extends MusicBeatState
 					{
 						if(daSong == 'taco')
 							{
-								var randomint:Int = FlxG.random.int(1, 10);
+								var randomint:Int = FlxG.random.int(1, 4);
 								if (randomint == 1)
 									{
 										videoIntro('funi');
@@ -3618,6 +3628,10 @@ class PlayState extends MusicBeatState
 						backcameos.animation.play('bop', true);
 						frontcameos.animation.play('bop', true);
 					}
+			}
+		if (curStage == 'tacobell')
+			{
+				backcameos.animation.play('bop', true);
 			}
 
 		if (generatedMusic)
