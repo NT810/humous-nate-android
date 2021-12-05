@@ -498,13 +498,19 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
 				case 13:
-					addMoreText('Friday');
+					addMoreText('Taco');
 				// credTextShit.visible = true;
 				case 14:
-					addMoreText('Night');
+					addMoreText('Bell');
 				// credTextShit.text += '\nNight';
 				case 15:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('Tuesday'); // credTextShit.text += '\nFunkin';
+					var randomint:Int = FlxG.random.int(1, 100);
+					if (randomint == 1)
+						{
+							addMoreText('Innit');
+						}
+					
 
 				case 16:
 					skipIntro();

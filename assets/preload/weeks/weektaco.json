@@ -1,14 +1,15 @@
 {
 	"storyName": "Shit Stain",
 	"hideFreeplay": false,
-	"weekBackground": "stage",
-	"weekBefore": "tutorial",
+	"weekBackground": "tacobell",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "tutorial",
 	"startUnlocked": true,
+	"hideStoryMode": false,
 	"weekCharacters": [
 		"nate",
 		"bf",
@@ -43,6 +44,5 @@
 			]
 		]
 	],
-	"hideStoryMode": false,
 	"weekName": "weektaco"
 }

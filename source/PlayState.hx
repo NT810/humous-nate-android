@@ -1,5 +1,6 @@
 package;
 
+import openfl.display3D.textures.VideoTexture;
 import flixel.ui.FlxSpriteButton;
 #if desktop
 import Discord.DiscordClient;
@@ -99,6 +100,8 @@ class PlayState extends MusicBeatState
 	public var gfMap:Map<String, Character> = new Map<String, Character>();
 	#end
 
+	private var videoCurrentlyPlaying:FlxVideo;
+	private var isVideoCurrentlyPlaying:Bool;
 	public var BF_X:Float = 770;
 	public var BF_Y:Float = 100;
 	public var DAD_X:Float = 100;
@@ -422,10 +425,12 @@ class PlayState extends MusicBeatState
 				building.screenCenter();
 				add(building);
 
+				var antialias:Bool = ClientPrefs.globalAntialiasing;
+
 				backcameos = new FlxSprite(0, 0);
 				backcameos.frames = Paths.getSparrowAtlas("outside/cameos_back");
 				backcameos.animation.addByPrefix('bop', "cameos_back", 24, false);
-				backcameos.antialiasing = FlxG.save.data.antialiasing;
+				backcameos.antialiasing = antialias;
 				backcameos.setGraphicSize(Std.int(backcameos.width * 1.2));
 				backcameos.screenCenter();
 				add(backcameos);
@@ -433,7 +438,7 @@ class PlayState extends MusicBeatState
 				frontcameos = new FlxSprite(0, 0);
 				frontcameos.frames = Paths.getSparrowAtlas("outside/cameos_front");
 				frontcameos.animation.addByPrefix('bop', "cameos_front", 24, false);
-				frontcameos.antialiasing = FlxG.save.data.antialiasing;
+				frontcameos.antialiasing = antialias;
 				frontcameos.setGraphicSize(Std.int(frontcameos.width * 1.2));
 				frontcameos.screenCenter();
 				add(frontcameos);
@@ -828,9 +833,28 @@ class PlayState extends MusicBeatState
 
 				case 'taco' | 'baja-blast' | 'bafroom':
 					{
-						snapCamFollowToPos(FlxG.width/2, FlxG.height/2);
-						FlxG.camera.focusOn(camFollow);
-						startDialogue(dialogueJson);
+						if(daSong == 'taco')
+							{
+								var randomint:Int = FlxG.random.int(1, 10);
+								if (randomint == 1)
+									{
+										videoIntro('funi');
+										snapCamFollowToPos(FlxG.width/2, FlxG.height/2);
+										FlxG.camera.focusOn(camFollow);
+									}
+								else
+									{
+										snapCamFollowToPos(FlxG.width/2, FlxG.height/2);
+										FlxG.camera.focusOn(camFollow);
+										startDialogue(dialogueJson);
+									}
+							}
+						else
+							{
+								snapCamFollowToPos(FlxG.width/2, FlxG.height/2);
+								FlxG.camera.focusOn(camFollow);
+								startDialogue(dialogueJson);
+							}
 					}
 
 				default:
@@ -3708,6 +3732,54 @@ class PlayState extends MusicBeatState
 
 		setOnLuas('curBeat', curBeat);
 		callOnLuas('onBeatHit', []);
+	}
+
+	public function videoIntro(name:String):Void {
+		#if VIDEOS_ALLOWED
+		var foundFile:Bool = false;
+		var fileName:String = #if MODS_ALLOWED Paths.mods('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
+		#if sys
+		if(FileSystem.exists(fileName)) {
+			foundFile = true;
+		}
+		#end
+
+		if(!foundFile) {
+			fileName = Paths.video(name);
+			#if sys
+			if(FileSystem.exists(fileName)) {
+			#else
+			if(OpenFlAssets.exists(fileName)) {
+			#end
+				foundFile = true;
+			}
+		}
+
+		if(foundFile) {
+			inCutscene = true;
+			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+			bg.scrollFactor.set();
+			add(bg);
+			videoCurrentlyPlaying = new FlxVideo(fileName);
+			isVideoCurrentlyPlaying = true;
+
+			(videoCurrentlyPlaying).finishCallback = function() {
+				remove(bg);
+				if (curSong =='taco')
+					{
+						startDialogue(dialogueJson);
+					}
+				else 
+					{
+						startCountdown();
+					}
+				isVideoCurrentlyPlaying = false;
+			}
+			return;
+		} else {
+			FlxG.log.warn('Couldnt find video file: ' + fileName);
+		}
+		#end
 	}
 
 	public function callOnLuas(event:String, args:Array<Dynamic>):Dynamic {

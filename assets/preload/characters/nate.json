@@ -1,69 +1,80 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				10,
 				10
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Nate_Idle",
-			"indices": []
+			"indices": [],
+			"name": "Nate_Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				145,
-				-58
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Nate_Left0",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				17,
-				-104
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Nate_Down0",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				76,
-				-6
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "Nate_Up0",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				16,
+				86,
 				-54
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Nate_Right0",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Nate_Left_Playable"
+		},
+		{
+			"offsets": [
+				85,
+				-104
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Nate_Down_Playable"
+		},
+		{
+			"offsets": [
+				205,
+				-58
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Nate_Right_Playable"
+		},
+		{
+			"offsets": [
+				116,
+				-6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Nate_Up_Playable"
+		},
+		{
+			"offsets": [
+				29,
+				21
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "eatTaco",
+			"loop": false,
+			"name": "Nate_EatingTaco"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/nate",
+	"image": "characters/playableNate",
 	"position": [
 		170,
 		110
 	],
 	"healthicon": "nate",
-	"flip_x": false,
+	"flip_x": true,
 	"healthbar_colors": [
 		55,
 		255,
@@ -71,7 +82,7 @@
 	],
 	"camera_position": [
 		-70,
-		70
+		0
 	],
 	"sing_duration": 4.1,
 	"scale": 1
