@@ -3589,7 +3589,7 @@ class PlayState extends MusicBeatState
 
 		if (curStage == 'outside')
 			{
-				if (curBeat % 4 == 0)
+				if (curBeat % 2 == 0)
 					{
 						backcameos.animation.play('bop', true);
 						frontcameos.animation.play('bop', true);
