@@ -397,8 +397,8 @@ class PlayState extends MusicBeatState
 				add(dumbGroup);
 				dumbGroup.add(new BGSprite('tacobell/background', 0, 0));
 				dumbGroup.add(new BGSprite('tacobell/till', 0, 0));
-				dumbGroup.add(new BGSprite('tacobell/tableLeft', 0, 0));
-				dumbGroup.add(new BGSprite('tacobell/tableRight', 0, 0));
+				dumbGroup.add(new BGSprite('tacobell/tableleft', 0, 0));
+				dumbGroup.add(new BGSprite('tacobell/tableright', 0, 0));
 				dumbGroup.add(new BGSprite('tacobell/chairsLeft', 0, 0));
 				dumbGroup.add(new BGSprite('tacobell/chairsRight', 0, 0));
 
